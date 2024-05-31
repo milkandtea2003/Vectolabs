@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+body {
+  font-family: "Open Sans";
+  background: #f5f6fa;
+}
+
+.RightArea {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.container {
+  display: flex;
+  width: auto;
+  padding-right: 30px;
+  flex: 1;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f4f4f4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 0 10px;
+  z-index: 10000;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.closeSidebar {
+  background-color: transparent;
+  border: none;
+  float: right;
+  font-size: 20px;
+}
+
+.SideBarTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SidebarArea {
+  padding: 20px 20px 0 0;
+}
+
+.ring {
+  background-color: #67b3ff;
+  height: 2.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  fill: white;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}
+
+.avatar {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #67b3ff;
+}
+
+.caret {
+  height: 100%;
+  width: 0.625rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    flex-direction: column;
+  }
+}
+
+.participantHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  margin-right: 23px;
+}
+
+.searchGroup {
+  height: 25px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: end;
+  width: auto;
+  flex-wrap: wrap;
+}
+.searchInput {
+  border-radius: 4px 0 0 4px;
+  height: 100%;
+  width: 60%;
+  border-right: none;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
+  padding: 4px 8px;
+}
+.searchInput::placeholder {
+  color: #959595;
+  font-style: italic;
+}
+
+.searchButton {
+  border-radius: 0 4px 4px 0;
+  border-left: none;
+  border: none;
+  min-height: 33px;
+  background: #6ab4ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchButton img {
+  height: 100%;
+  width: 20px;
+}
+@media screen and (max-width: 537px) {
+  .participantHeader {
+    display: block;
+  }
+  .searchGroup {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .searchInput {
+    width: calc(100% - 50px);
+  }
+}
+
+.participantsArea {
+  background: #fff;
+  border-radius: 12px;
+  padding: 5px 20px;
+  margin-top: 20px;
+}
+
+.participantsCard {
+  background: #f5f6fa;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+.participantName {
+  font-weight: bold;
+  margin: 0;
+}
+.participantsList {
+  max-height: 480px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+.participantsList::-webkit-scrollbar {
+  width: 8px;
+}
+.participantsList::-webkit-scrollbar-track {
+  background: #efefef;
+}
+
+.participantsList::-webkit-scrollbar-thumb {
+  background-color: #67b3ff;
+  border-radius: 4px;
+}
+
+.leftContent {
+  flex-grow: 1;
+}
+.statusText {
+  color: #9bcbfc;
+}
+
+.rightChevron {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevronRight {
+  border-radius: 50%;
+  border: none;
+  background: #67b3ff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chevronRight img {
+  height: 100%;
+  width: 12px;
+}
+
+.chevronRight img {
+  height: 100%;
+  width: 12px;
+}
+.greyText {
+  margin: 0;
+  line-height: 20px;
+  color: #b4b4b3;
+}
+.RightContainer {
+  display: block;
+  flex: 1;
+}
+
+.CardGroup {
+  display: grid;
+  width: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.CardGroup .Card {
+  background: #fff;
+  border-radius: 8px;
+  min-height: 125px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Card img {
+  height: 24px;
+  width: 24px;
+}
+.redText {
+  color: red;
+}
+.boldText {
+  font-weight: bold;
+}
