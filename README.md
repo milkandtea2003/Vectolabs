@@ -1,4 +1,4 @@
-# vectolab
+# Vectolab
 
 ## Project setup
 ```
